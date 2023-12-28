@@ -89,6 +89,7 @@
                 android:layout_height="57dp"
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/google_icon"
+                android:paddingStart="10dp"
                 android:shadowColor="@color/black"
                 android:text="Google ile bağlan"
                 android:textColor="@color/gray2"
@@ -106,6 +107,7 @@
                 android:layout_height="57dp"
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/facebook_icon"
+                android:paddingStart="10dp"
                 android:shadowColor="@color/black"
                 android:text="Google ile bağlan"
                 android:textColor="@color/gray2"
@@ -165,6 +167,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtİnformation"
                 app:layout_constraintVertical_bias="0.0" />
 
+
             <CheckBox
                 android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
@@ -219,10 +222,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Üye Ol'a basarak Üyelik koşulları'nı kabul ediyorum"
+                android:textColor="@color/gray2"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textVievUye"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="12sp"
-                android:textColor="@color/gray2"
                 app:layout_constraintHorizontal_bias="0.452"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnSignİn"
@@ -279,6 +282,55 @@
                 app:layout_constraintStart_toEndOf="@+id/checkBox3"
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
                 app:layout_constraintVertical_bias="0.101" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtİnformation"
+                app:layout_constraintVertical_bias="0.126">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/non_selected_radio"
+                    android:button="@android:color/transparent"
+                    android:padding="20dp"
+                    android:text="Kadin"
+                    android:elevation="10dp"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnSignİn"
+                    app:layout_constraintHorizontal_bias="0.824"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSex"
+                    app:layout_constraintVertical_bias="0.627">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="68dp"
+                    android:background="@drawable/non_selected_radio"
+                    android:button="@android:color/transparent"
+                    android:elevation="10dp"
+                    android:padding="20dp"
+                    android:text="Erkek"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnSignİn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSex"
+                    app:layout_constraintVertical_bias="0.625">
+
+                </RadioButton>
+
+            </RadioGroup>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

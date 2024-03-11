@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
-        android:title="Anasayfa"
-        android:icon="@drawable/home"/>
+        android:id="@+id/share"
+        android:title="Paylaş"
+        android:icon="@drawable/share_24"/>
     <item
-        android:id="@+id/categories"
-        android:title="Kategoriler"
-        android:icon="@drawable/category_svgrepo_com"/>
-    <item
-        android:id="@+id/favorities"
-        android:title="Favorilerim"
-        android:icon="@drawable/svgmix_4mx9qb_grey_heart"/>
-    <item
-        android:id="@+id/basket"
-
-        android:title="Sepetim"
-        android:icon="@drawable/shopping"/>
-    <item
-        android:id="@+id/myprofile"
-
-        android:title="Hesabım"
-        android:icon="@drawable/person"/>
+        android:id="@+id/delete"
+        android:title="Sil"
+        android:icon="@drawable/trash"/>
 </menu>

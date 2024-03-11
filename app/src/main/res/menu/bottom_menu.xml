@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  
+
+    <item
+        android:id="@+id/mainFragment"
+        android:title="Anasayfa"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/categoriesFragment"
+        android:title="Kategoriler"
+        android:icon="@drawable/category_svgrepo_com"/>
+    <item
+        android:id="@+id/favoritesFragment"
+        android:title="Favorilerim"
+        android:icon="@drawable/svgmix_4mx9qb_grey_heart"/>
+    <item
+        android:id="@+id/shoppingFragment"
+        android:title="Sepetim"
+        android:icon="@drawable/shopping"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Hesabım"
+        android:icon="@drawable/person"/>
 </menu>

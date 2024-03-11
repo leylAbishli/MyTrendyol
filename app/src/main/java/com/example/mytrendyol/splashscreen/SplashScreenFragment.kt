@@ -1,6 +1,5 @@
-package com.example.mytrendyol
+package com.example.mytrendyol.splashscreen
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -9,8 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.mytrendyol.activity.MainActivity
+import com.example.mytrendyol.R
 import com.example.mytrendyol.databinding.FragmentSplashScreenBinding
-import dagger.hilt.android.AndroidEntryPoint
 
 
 class SplashScreenFragment : Fragment() {

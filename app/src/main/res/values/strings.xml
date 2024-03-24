@@ -1,7 +1,103 @@
 <resources>
+    <!--    Login   -->
     <string name="app_name">MyTrendyol</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="item_label">Seçiniz</string>
-    <string name="reuqired">required</string>
+    <string name="advertisement">Yeni sezon trend ürünler sizi bekliyor</string>
+    <string name="e_posta">E-Posta</string>
+    <string name="password">Şifre</string>
+    <string name="forgot_password">Şifremi unutdum</string>
+    <string name="login">Giriş Yap</string>
+    <string name="login_with_fb">Facebook ile Baglan</string>
+    <string name="login_with_gog">Google  ile Baglan</string>
+    <string name="arent_you_member">Üye degil misin?</string>
+    <string name="be_member">Üye Ol</string>
+    <!--    SignUp-->
+    <string name="info_psw">Şifreniz en az 7 karakter ve en fazla 64 karekter olmalı,harf ve rakam içermelidir</string>
+    <string name="gender">Cinsiyet (Opsiyonel)</string>
+    <string name="woman">Kadın</string>
+    <string name="man">Erkek</string>
+    <string name="member_info">Üye Ola basarak Üyelik koşullarını kabul ediyorum</string>
+    <string name="chip1">İş yeri alışverişlerim için fırsatlardan haberdar olmak istiyorum</string>
+    <string name="chip2">Ürün ve hizmetlerin geliştirilmesine yönelik fealiyyetlerin yürütülmesi ve tarafıma avantajlı tekliflerin sunulabilmesi amacıyla kişisel verilerimin işlenmesine ve paylaşılmasına açık rıza veriyorum</string>
+    <string name="chip3">Kampaniyalardan haberdar olabilmem için kişisel verilerimin işlenmesine ve tarafıma ektronik ileti gönderilmesini kabul ediyorum</string>
+    <string name="chip4">Kişisel verilerimin işlenmesine yönelik aydınlatma metnini okudum ve anladım</string>
+    <string name="are_u_member">Üye misin?</string>
+    <!--    Main -->
+    <string name="special_for_u">Sana Özel Ürünler</string>
+    <string name="flash">Flash Ürünler</string>
+    <string name="advert">Kampanyalar</string>
+    <!--   Categories-->
+    <string name="categories">Kategoriler</string>
+    <!--   Favorites-->
+    <string name="favorites">Favoriler</string>
+    <!--   My Cart-->
+    <string name="my_cart">Sepetim</string>
+    <string name="my_cart2">Güvenli Ödeme</string>
+    <string name="communication_info">İletişim bilgileri</string>
+    <string name="country_picket">Ülke Kodu</string>
+    <string name="address_info">Address Bilgileri </string>
+    <string name="city">Şehir </string>
+    <string name="region">Bölge </string>
+    <string name="address">Adres </string>
+    <string name="btn_confrim">Onayla ve Bitir </string>
+    <string name="card_info">Kart Bilgileri </string>
+    <string name="card_number">Kart numarası </string>
+    <string name="card_time">Son kullanma tarihi </string>
+    <string name="cvv">CVV </string>
+    <string name="month">Ay </string>
+    <string name="year">Yıl </string>
+    <string name="sum">Toplam </string>
+    <string name="confrim">Onayla </string>
+
+    <!--  Profile-->
+    <string name="before_i_savv">Önceden Gezdiklerim</string>
+    <string name="discount_coupons">Indirim Kuponlarım</string>
+    <string name="asistant">Trendyol Asistanı</string>
+    <string name="msg">Satıcı Mesajlarım</string>
+    <string name="orders">Tüm Siparişlerim</string>
+    <string name="comment_order">Ürün ve Satıcı Yorumlarım</string>
+    <string name="again_order">Tekrar Satın Al</string>
+    <string name="my_account">Hesabım</string>
+    <string name="phonem">Takip Etdiğim Fenomenler</string>
+    <string name="account_settings">Hesap Ayarlarım</string>
+    <string name="questions">Yardım ve Sıkça Sorulan Sorular</string>
+    <!--    Account Settings-->
+    <string name="suitable">Boy ve kilo bilgilerini girerek sana daha uygun ürünleri sunmamıza yardımcı ola bilirsin!</string>
+    <string name="height">Boy: 165 cm</string>
+    <string name="weight">Kilo: 55 kg</string>
+    <string name="add">Ekle</string>
+    <string name="my_info">Kullancı Bilgilerim</string>
+    <string name="my_address">Adres Bilgilerim</string>
+    <string name="my_register_card">Kayıtlı Kartlarım</string>
+    <string name="change_email">E-Posta Değişikliği</string>
+    <string name="change_psw">Şiftre Değişikliği</string>
+    <string name="announcment">Duyuru Tercihlerim</string>
+    <string name="change_lang">Dil Değiştir</string>
+    <string name="fail_succes">Başarılı ve ya Başarısız Girişler</string>
+    <string name="logout">Çıkış</string>
+    <!--    My Information-->
+    <string name="usermame">Ad Soyad</string>
+    <string name="phone">Cep Telefonu</string>
+    <string name="Institutional">Kurumsal</string>
+    <string name="update">Güncelle</string>
+    <!--    Detailed-->
+    <string name="body">Beden</string>
+    <string name="product_info">Ürün özellikleri</string>
+    <string name="rewiews">Ürün Değerlendirmeleri</string>
+    <string name="confirm_cart">Sepeti onayla</string>
+    <string name="now_buy">Şimdi al</string>
+    <string name="color">Renk:</string>
+    <string name="size">Boy:</string>
+    <string name="material">Materyal:</string>
+    <string name="dealer">Bu ürünü gönderecek satıcı:</string>
+    <string name="campaign_info">Kampanya fiyatında satılmak üzere 100 adetten fazla stok sunulmuştur</string>
+    <string name="dealer_info">İncelemiş olduğunuz ürünün satış fiyatını        satıcı belirlemektedir</string>
+
+    <!--    Address-->
+    <string name="address_info_register">Adres Malumatlarım</string>
+
+    <!--    Card-->
+    <string name="card_info_register">Kayıtlı Kartlarım</string>
+    <string name="card_name">Azerbaycan Kartım</string>
+
 </resources>

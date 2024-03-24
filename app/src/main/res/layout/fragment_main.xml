@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.MainFragment">
+    tools:context=".ui.fragments.main.MainFragment">
 
 
     <androidx.appcompat.widget.SearchView
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_marginStart="8dp"
-                android:text="Sana özel ürünler"
+                android:text="@string/special_for_u"
                 android:textSize="18dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/speacialForMeRcycle"
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_marginStart="8dp"
-                android:text="Flash Ürünler"
+                android:text="@string/flash"
                 android:textSize="18dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/flashProductRcycle"
@@ -127,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Kampanyalar"
+                android:text="@string/advert"
                 android:textSize="18dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/offer"
@@ -144,7 +144,7 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,6 +154,7 @@
             android:id="@+id/chipGroup"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:background="@drawable/chip_group"
             android:layout_marginTop="24dp">
 
         </com.google.android.material.chip.ChipGroup>

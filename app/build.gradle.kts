@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
+    id("androidx.navigation.safeargs")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
@@ -57,7 +58,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-storage")
     implementation("com.google.firebase:firebase-firestore")
-
+    implementation ("com.google.firebase:firebase-database:20.0.2")
     //ViewPager
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     //implementation("me.relax:circleindicator:2.1.4")
@@ -70,6 +71,8 @@ dependencies {
 
     // Glide
     implementation ("com.github.bumptech.glide:glide:4.12.0")
+    implementation("com.google.firebase:firebase-database-ktx:20.3.1")
+    implementation("com.google.firebase:firebase-messaging:23.4.1")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
     val lifecycle_version = "2.6.2"
@@ -84,15 +87,17 @@ dependencies {
     //Okhttp-logging
     implementation("com.squareup.okhttp3:logging-interceptor:3.9.0")
    implementation("com.squareup.okhttp3:logging-interceptor:3.9.0")
-//
-//    //Dagger2
-//    val appcompat_version = "1.6.1"
-//    implementation ("com.google.dagger:dagger:2.50")
-//    kapt("com.google.dagger:dagger-compiler:2.50")
 
     //  Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.50")
     kapt("com.google.dagger:hilt-android-compiler:2.50")
+
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
+    val nav_version = "2.7.7"
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     implementation("androidx.navigation:navigation-fragment:2.7.6")
     implementation("androidx.core:core-ktx:1.9.0")

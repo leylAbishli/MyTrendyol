@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context=".login.LoginFragment">
+    tools:context=".ui.fragments.login.LoginFragment">
 
     <View
         android:id="@+id/view"
@@ -21,28 +21,26 @@
         android:id="@+id/textTrendyol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
         android:text="trendyol"
         android:textColor="@color/white"
         android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.302" />
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <TextView
         android:id="@+id/textTrendyolSlogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yeni sezon trend ürünler seni bekliyor."
+        android:layout_marginTop="16dp"
+        android:text="@string/advertisement"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTrendyol"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintTop_toBottomOf="@+id/textTrendyol" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/view2"
@@ -79,7 +77,7 @@
                     android:id="@+id/txtepostalgn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="E-Posta"
+                    android:hint="@string/e_posta"
                     android:inputType="textEmailAddress"
                     android:textColorHint="@color/orange">
 
@@ -107,7 +105,7 @@
                     android:id="@+id/txtpswlog"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Sifre"
+                    android:hint="@string/password"
                     android:inputType="textPassword"
                     android:textColorHint="@color/orange">
 
@@ -119,29 +117,26 @@
                 android:id="@+id/textPswForget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Şifremi unuttum"
+                android:layout_marginTop="8dp"
+                android:text="@string/forgot_password"
                 android:textColor="@color/orange"
-                app:layout_constraintBottom_toTopOf="@+id/btnlogin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pswlogin"
-                app:layout_constraintVertical_bias="0.288" />
+                app:layout_constraintTop_toBottomOf="@+id/pswlogin" />
 
             <Button
                 android:id="@+id/btnlogin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="44dp"
                 android:backgroundTint="@color/orange"
-                android:text="Giriş Yap"
+                android:text="@string/login"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.533"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pswlogin"
-                app:layout_constraintVertical_bias="0.248" />
+                app:layout_constraintTop_toBottomOf="@+id/pswlogin" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btngoogle"
@@ -150,7 +145,7 @@
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/google_icon"
                 android:shadowColor="@color/black"
-                android:text="Google ile bağlan"
+                android:text="@string/login_with_gog"
                 android:padding="10dp"
                 android:textColor="@color/gray2"
                 android:textSize="13sp"
@@ -168,7 +163,7 @@
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/facebook_icon"
                 android:shadowColor="@color/black"
-                android:text="Facebook ile bağlan"
+                android:text="@string/login_with_fb"
                 android:textColor="@color/gray2"
                 android:textSize="13sp"
                 android:padding="10dp"
@@ -183,21 +178,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="92dp"
+                android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:text="Üye değil misin?"
+                android:text="@string/arent_you_member"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtsignup"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/txtsignup"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
+                android:layout_marginStart="1dp"
                 android:layout_marginEnd="96dp"
                 android:layout_marginBottom="8dp"
-                android:text="Üye ol"
+                android:text="@string/be_member"
                 android:textColor="@color/orange"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textVievUye" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

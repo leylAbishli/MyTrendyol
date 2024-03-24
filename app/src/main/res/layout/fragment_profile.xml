@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.ProfileFragment">
+    tools:context=".ui.fragments.profile.ProfileFragment">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -52,8 +52,8 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="12dp"
         android:src="@drawable/bell_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,10 +80,9 @@
                 android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/icons8_clock"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.048"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,10 +101,9 @@
                 android:id="@+id/imageView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="24dp"
                 android:src="@drawable/label_black_shape_svgrepo_com"
-                app:layout_constraintEnd_toStartOf="@+id/imageView8"
-                app:layout_constraintHorizontal_bias="0.234"
                 app:layout_constraintStart_toEndOf="@+id/imageView6"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -113,10 +111,10 @@
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:src="@drawable/chat_smile_svgrepo_com"
                 app:layout_constraintEnd_toStartOf="@+id/imageView8"
-                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintHorizontal_bias="0.563"
                 app:layout_constraintStart_toEndOf="@+id/imageView12"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -125,9 +123,11 @@
                 android:layout_width="64dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="16dp"
-                android:text="Önceden Gezdiklerim"
+                android:layout_marginEnd="32dp"
+                android:text="@string/before_i_savv"
                 android:textSize="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView6"
                 app:layout_constraintVertical_bias="0.508" />
@@ -137,7 +137,7 @@
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="32dp"
-                android:text="İndirim Kuponlarım"
+                android:text="@string/discount_coupons"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textview1"
                 app:layout_constraintTop_toBottomOf="@+id/imageView12"
@@ -147,7 +147,7 @@
                 android:id="@+id/favName"
                 android:layout_width="93dp"
                 android:layout_height="41dp"
-                android:text="Trendyol Asistanı"
+                android:text="@string/asistant"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/favDescription"
                 app:layout_constraintHorizontal_bias="0.913"
@@ -160,7 +160,7 @@
                 android:layout_width="72dp"
                 android:layout_height="38dp"
                 android:layout_marginEnd="4dp"
-                android:text="Satıcı Mesajlarım"
+                android:text="@string/msg"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView8"
@@ -212,11 +212,13 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
                 android:layout_marginEnd="148dp"
-                android:text="Tüm Siparişlerim"
+                android:text="@string/orders"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.384" />
 
@@ -265,9 +267,11 @@
                 android:id="@+id/textView15"
                 android:layout_width="99dp"
                 android:layout_height="45dp"
-                android:text="Ürün ve Satıcı Yorumlarım"
+                android:layout_marginStart="4dp"
+                android:text="@string/comment_order"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                app:layout_constraintStart_toEndOf="@+id/imageView15"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.733" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -317,7 +321,7 @@
                 android:id="@+id/textView16"
                 android:layout_width="57dp"
                 android:layout_height="41dp"
-                android:text="Tekrar Satın Al"
+                android:text="@string/again_order"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView14"
                 app:layout_constraintStart_toEndOf="@+id/imageView13"
@@ -367,7 +371,7 @@
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hesabım"
+                android:text="@string/my_account"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/imageView17"
@@ -403,24 +407,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:text="Takip Etdiğim Fenomenler"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="58dp"
+                android:text="@string/phonem"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toTopOf="@+id/txtaccountSetting"
+                app:layout_constraintEnd_toStartOf="@+id/imageView21"
                 app:layout_constraintStart_toEndOf="@+id/imageView18"
-                app:layout_constraintTop_toBottomOf="@+id/view"
-                app:layout_constraintVertical_bias="0.34" />
+                app:layout_constraintTop_toBottomOf="@+id/view" />
 
             <TextView
                 android:id="@+id/txtaccountSetting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:text="Hesap Ayarlarım"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="133dp"
+                android:text="@string/account_settings"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView22"
                 app:layout_constraintStart_toEndOf="@+id/imageView17"
-                app:layout_constraintTop_toBottomOf="@+id/view"
-                app:layout_constraintVertical_bias="0.82" />
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
             <ImageView
                 android:id="@+id/imageView21"
@@ -483,25 +489,26 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yardım ve Sıkça Sorulan Sorular"
+                android:text="@string/questions"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView23"
                 app:layout_constraintHorizontal_bias="0.225"
                 app:layout_constraintStart_toEndOf="@+id/imageView19"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.555" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginEnd="28dp"
                 android:src="@drawable/chevron_forward_circle_sharp_svgrepo_com"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView20"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.4" />
+                app:layout_constraintVertical_bias="0.433" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

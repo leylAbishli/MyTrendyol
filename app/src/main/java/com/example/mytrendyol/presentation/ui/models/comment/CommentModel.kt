@@ -4,5 +4,5 @@ data class CommentModel(
     val comment:String?=null,
     val publisher:String?=null,
     val username:String?=null,
-    val time: Any
+    val time: Any?=null
 )

@@ -10,9 +10,9 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.example.mytrendyol.ui.activity.MainActivity
 import com.example.mytrendyol.R
 import com.example.mytrendyol.databinding.FragmentSignUpBinding
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
 import com.example.mytrendyol.presentation.ui.viewmodels.signup.SignUpViewModel
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
@@ -41,6 +41,7 @@ class SignUpFragment : Fragment() {
         emailFocusListener()
         passwordFocusListener()
         alreadyLogin()
+        radioBtn()
     }
 
 
@@ -118,7 +119,7 @@ class SignUpFragment : Fragment() {
                                 }, {
                                     Toast.makeText(
                                         requireContext(),
-                                        "Please verify your email address",
+                                        "Lütfen Email Adresini Doğrula",
                                         Toast.LENGTH_SHORT
                                     ).show()
                                 })
@@ -145,7 +146,7 @@ class SignUpFragment : Fragment() {
 
                                      },{}
                                  )
-                                delay(1000)
+                                delay(500)
                             }
                         }
 
@@ -174,6 +175,19 @@ class SignUpFragment : Fragment() {
 
     }
 
+    private fun radioBtn(){
+        binding.radioButton.setOnClickListener {
+            if (binding.radioButton.isChecked) {
+                binding.radioButton.setBackgroundColor(resources.getColor(R.color.orange))
+            }
+        }
+        binding.radioButton2.setOnClickListener {
+            if(binding.radioButton2.isChecked){
+                binding.radioButton2.setBackgroundColor(resources.getColor(R.color.orange))
+            }
+
+        }
+    }
 
     private fun bottomNavigation() {
         val activity = requireActivity() as MainActivity

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.main.MainFragment">
+    android:background="#FAFAFA"
+    tools:context=".presentation.ui.fragments.main.MainFragment">
 
 
     <androidx.appcompat.widget.SearchView
@@ -15,8 +16,6 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/edtback"
         app:iconifiedByDefault="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:queryHint="Marka,ürün veya kategori ara"
@@ -26,11 +25,13 @@
         android:id="@+id/notificationButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/bell_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/SearchView"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SearchView"
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageButton>
 
@@ -38,7 +39,6 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,9 +54,8 @@
                 android:id="@+id/flashProductRcycle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
-                android:layout_marginEnd="8dp"
+                android:background="@color/orange"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toTopOf="@+id/textView33"
@@ -70,9 +69,7 @@
                 android:id="@+id/speacialForMeRcycle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginEnd="8dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +123,7 @@
                 android:id="@+id/textView33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="4dp"
                 android:text="@string/advert"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -144,7 +141,6 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,10 +150,11 @@
             android:id="@+id/chipGroup"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@drawable/chip_group"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="24dp"
+            android:background="@drawable/chip_group">
 
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

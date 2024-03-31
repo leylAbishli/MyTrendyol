@@ -9,15 +9,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.example.mytrendyol.ui.activity.MainActivity
-import com.example.mytrendyol.ui.adapters.comment.CommentAdapter
+import androidx.navigation.fragment.findNavController
+import com.example.mytrendyol.R
 import com.example.mytrendyol.presentation.ui.models.comment.CommentModel
 import com.example.mytrendyol.presentation.ui.viewmodels.comment.CommentViewModel
 import com.example.mytrendyol.databinding.FragmentDetailedBinding
-import com.example.mytrendyol.presentation.ui.viewmodels.detailed.DetailedViewModel
-import com.example.mytrendyol.ui.adapters.detailed.SizeAdapter
-import com.example.mytrendyol.ui.adapters.detailed.ViewPagerAdapter
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
+import com.example.mytrendyol.presentation.ui.adapters.comment.CommentAdapter
+import com.example.mytrendyol.presentation.ui.adapters.detailed.SizeAdapter
+import com.example.mytrendyol.presentation.ui.adapters.detailed.ViewPagerAdapter
 import com.example.mytrendyol.presentation.ui.models.detailed.ProductInfoModel
+import com.example.mytrendyol.presentation.ui.viewmodels.detailed.DetailedViewModel
 import com.example.mytrendyol.presentation.ui.viewmodels.detailed.productInfo.ProductInfoViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.AndroidEntryPoint
@@ -72,7 +74,10 @@ class DetailedFragment : Fragment() {
                 product.imageUrl?.let {
                     viewPagerAdapter.setImageUrls(it as ArrayList<String>)
                     binding.introViewPager.adapter = viewPagerAdapter
+                    binding.springDotsIndicator.attachTo(binding.introViewPager)
                 }
+
+
             }
         }
 
@@ -96,7 +101,8 @@ class DetailedFragment : Fragment() {
             product?.imageUrl?.let {
                 viewPagerAdapter.setImageUrls(it as ArrayList<String>)
                 binding.introViewPager.adapter = viewPagerAdapter
-                Log.e(TAG, "onViewCreated: ",)
+                binding.springDotsIndicator.attachTo(binding.introViewPager)
+                Log.e(TAG, "onViewCreated: ")
             }
         }
 
@@ -104,14 +110,15 @@ class DetailedFragment : Fragment() {
         setCommentAdapter()
         bottomNavigation()
         setProductInfo()
+        backView()
     }
 
-    private fun setCommentAdapter(){
-        commentViewModel.comments.observe(viewLifecycleOwner){ list->
+    private fun setCommentAdapter() {
+        commentViewModel.comments.observe(viewLifecycleOwner) { list ->
             list?.let {
                 this.list = it
                 if (list.isEmpty()) {
-                    binding.commentCardview.visibility=View.GONE
+                    binding.commentCardview.visibility = View.GONE
                 } else {
                     commentAdapter.submitList(list)
                     binding.recyclerView2.adapter = commentAdapter
@@ -119,6 +126,7 @@ class DetailedFragment : Fragment() {
             }
         }
     }
+
     private fun setProductInfo() {
         productInfoViewModel.productInfo.observe(viewLifecycleOwner) { listProductInfo ->
             listProductInfo?.let {
@@ -126,9 +134,9 @@ class DetailedFragment : Fragment() {
                 val productInfo = it.firstOrNull()
                 productInfo?.let { info ->
                     binding.txtColor.text = info.color
-                    binding.txtSize.text=info.size
-                    binding.txtSealer.text=info.sealer
-                    binding.txtMaterial.text=info.material
+                    binding.txtSize.text = info.size
+                    binding.txtSealer.text = info.sealer
+                    binding.txtMaterial.text = info.material
                 }
             }
         }
@@ -138,5 +146,11 @@ class DetailedFragment : Fragment() {
     private fun bottomNavigation() {
         val activity = requireActivity() as MainActivity
         activity.setBottomNavigation(false)
+    }
+
+    private fun backView() {
+        binding.imageView43.setOnClickListener {
+            findNavController().navigate(R.id.action_detailedFragment_to_mainFragment)
+        }
     }
 }

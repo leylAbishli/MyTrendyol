@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.login.LoginFragment">
+    tools:context=".presentation.ui.fragments.login.LoginFragment">
 
     <View
         android:id="@+id/view"
@@ -45,7 +45,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/view2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -140,63 +140,65 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btngoogle"
-                android:layout_width="144dp"
-                android:layout_height="57dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/google_icon"
+                android:padding="10dp"
                 android:shadowColor="@color/black"
                 android:text="@string/login_with_gog"
-                android:padding="10dp"
                 android:textColor="@color/gray2"
                 android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.92"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnlogin"
-                app:layout_constraintVertical_bias="0.267" />
+                app:layout_constraintStart_toEndOf="@+id/btnfcbook"
+                app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnfcbook"
-                android:layout_width="146dp"
-                android:layout_height="57dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/facebook_icon"
+                android:padding="10dp"
                 android:shadowColor="@color/black"
                 android:text="@string/login_with_fb"
                 android:textColor="@color/gray2"
                 android:textSize="13sp"
-                android:padding="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btngoogle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnlogin"
-                app:layout_constraintVertical_bias="0.267" />
+                app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
 
             <TextView
                 android:id="@+id/textVievUye"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="92dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="27dp"
                 android:text="@string/arent_you_member"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/txtsignup"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btngoogle" />
 
             <TextView
                 android:id="@+id/txtsignup"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
-                android:layout_marginStart="1dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="96dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="27dp"
                 android:text="@string/be_member"
                 android:textColor="@color/orange"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textVievUye" />
+                app:layout_constraintStart_toEndOf="@+id/textVievUye"
+                app:layout_constraintTop_toBottomOf="@+id/btngoogle" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -225,7 +227,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.79" />
+        app:layout_constraintGuide_begin="688dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

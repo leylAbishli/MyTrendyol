@@ -1,10 +1,13 @@
 package com.example.mytrendyol.presentation.ui.adapters.favorites
 
+import android.R
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -17,6 +20,7 @@ import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+
 
 
 class FavoriteProductAdapter(private val listener: OnChangedListener) :
@@ -66,10 +70,21 @@ class FavoriteProductAdapter(private val listener: OnChangedListener) :
                 else -> {}
             }
         }
+
         private fun bindMainProduct(current: MainModel) {
             binding.favName.text = current.productName
             binding.favPrice.text = current.price.toString()
             binding.favDescription.text = current.description
+            if(current.size?.isEmpty() == true){
+                binding.textInputLayout.visibility=View.GONE
+            }else {
+                binding.sizeTxt.setText(current.size?.get(0).toString())
+                binding.sizeTxt.setOnClickListener {
+                    binding.sizeTxt.setText(current.size.toString())
+                }
+            }
+
+
             Glide.with(binding.root)
                 .load(current.imageUrl?.get(0))
                 .into(binding.imageViewFav)
@@ -77,7 +92,8 @@ class FavoriteProductAdapter(private val listener: OnChangedListener) :
                 removeFromFavorites(current.id.toString())
                 notifyItemChanged(layoutPosition)
             }
-            isAdding(current.id.toString(),binding.button4)
+
+            isAdding(current.id.toString(), binding.button4)
             binding.button4.setOnClickListener {
                 if (binding.button4.tag == "add") {
                     val hmap = hashMapOf(
@@ -94,9 +110,8 @@ class FavoriteProductAdapter(private val listener: OnChangedListener) :
                 notifyItemChanged(layoutPosition)
             }
 
-
-
         }
+
 
 
         private fun bindFlashProduct(current: FlashProductModel) {

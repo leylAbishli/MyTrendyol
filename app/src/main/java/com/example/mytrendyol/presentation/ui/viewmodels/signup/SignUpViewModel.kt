@@ -27,7 +27,7 @@ class SignUpViewModel @Inject constructor(private val auth: FirebaseAuth) :ViewM
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     auth.currentUser?.sendEmailVerification()?.addOnCompleteListener {
-                        onSuccess(task.exception?.message ?: "Please verify your email address")
+                        onSuccess(task.exception?.message ?: "Lütfen Email Addresini Doğrula")
                     }
                     val user = auth.currentUser
                     val userId = user?.uid

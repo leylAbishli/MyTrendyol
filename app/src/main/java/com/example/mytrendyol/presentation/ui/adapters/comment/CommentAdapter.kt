@@ -37,10 +37,7 @@ class CommentAdapter : RecyclerView.Adapter<CommentAdapter.MyViewHolder>() {
         fun bind(current: CommentModel) {
             binding.commentTxt.text=current.comment
             binding.publisherTxt.text=current.username
-//            val timestamp = current.time
-//            val date = timestamp.
-//            val dateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault())
-//            binding.timeTxt.text = dateFormat.format(date)
+            binding.timeTxt.text = current.time.toString()
         }
 
 

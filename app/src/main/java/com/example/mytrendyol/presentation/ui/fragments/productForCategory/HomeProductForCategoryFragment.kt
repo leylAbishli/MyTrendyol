@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.example.mytrendyol.ui.activity.MainActivity
 import com.example.mytrendyol.databinding.FragmentHomeProductForCategoryBinding
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
+import com.example.mytrendyol.presentation.ui.adapters.productForCategory.ProductsAdapter
 import com.example.mytrendyol.presentation.ui.viewmodels.productForCategory.ProductForCategoryViewModel
-import com.example.mytrendyol.ui.adapters.productForCategory.ProductsAdapter
 import com.example.mytrendyol.presentation.ui.models.productForCategory.HomeModel
 import dagger.hilt.android.AndroidEntryPoint
 

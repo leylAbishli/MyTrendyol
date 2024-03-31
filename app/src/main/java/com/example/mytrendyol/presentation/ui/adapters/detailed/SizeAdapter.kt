@@ -43,12 +43,7 @@ class SizeAdapter : RecyclerView.Adapter<SizeAdapter.MyViewHolder>() {
         }
 
         fun bindForProduct(size: Any, position: Int) {
-            if (size is String) {
-                binding.textView4.text = size
-            } else if (size is Int) {
-                binding.textView4.text = size.toString()
-            }
-
+            binding.textView4.text = size.toString()
             binding.image.visibility = if (position == selectedPosition) View.VISIBLE else View.INVISIBLE
         }
     }

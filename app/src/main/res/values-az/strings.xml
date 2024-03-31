@@ -101,5 +101,9 @@
         <!--    Card-->
         <string name="card_info_register">Qeyd Olunmuş Kartlarım</string>
         <string name="card_name">Azərbaycan Kartım</string>
+        <!--    Reset Password-->
+
+        <string name="reset_info">Parolunuzu sıfırlamaq istədiyiniz e-poçt ünvanını yazın.Sizin e-poçt ünvanınıza keçid göndəriləcək.</string>
+        <string name="refresh_psw">Parolamı təzələ</string>
 
     </resources>

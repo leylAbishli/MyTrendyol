@@ -1,6 +1,6 @@
 package com.example.mytrendyol.presentation.ui.fragments.main
 
-import com.example.mytrendyol.ui.adapters.main.MainProductAdapter
+
 import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
@@ -12,11 +12,12 @@ import android.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.mytrendyol.R
-import com.example.mytrendyol.ui.activity.MainActivity
 import com.example.mytrendyol.databinding.FragmentMainBinding
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
 import com.example.mytrendyol.presentation.ui.adapters.favorites.OnChangedListener
+import com.example.mytrendyol.presentation.ui.adapters.main.MainAdvertisementAdapter
+import com.example.mytrendyol.presentation.ui.adapters.main.MainProductAdapter
 import com.example.mytrendyol.presentation.ui.viewmodels.main.MainViewModel
-import com.example.mytrendyol.ui.adapters.main.MainAdvertisementAdapter
 import com.example.mytrendyol.presentation.ui.models.main.AdvertisementModel
 import com.example.mytrendyol.presentation.ui.models.main.FlashProductModel
 import com.example.mytrendyol.presentation.ui.models.main.MainModel
@@ -60,6 +61,7 @@ class MainFragment : Fragment(), OnChangedListener {
         setAdapter()
         setChipGroup()
         setSearchView()
+
 
     }
 
@@ -224,6 +226,8 @@ class MainFragment : Fragment(), OnChangedListener {
     override fun onTotalAmountChanged(totalAmount: Double) {
 
     }
+
+
 }
 
 

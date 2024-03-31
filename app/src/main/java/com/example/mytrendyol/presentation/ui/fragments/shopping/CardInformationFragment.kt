@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.mytrendyol.R
 import com.example.mytrendyol.databinding.FragmentCardInformationBinding
+import com.example.mytrendyol.presentation.ui.adapters.shopping.CardAdapter
 import com.example.mytrendyol.presentation.ui.viewmodels.shopping.ShoppingCardViewModel
 import com.example.mytrendyol.presentation.ui.models.shopping.UserShopModel
-import com.example.mytrendyol.ui.adapters.shopping.CardAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,6 +34,7 @@ class CardInformationFragment : Fragment() {
         adapter = CardAdapter()
         viewModel.getUserInfo(requireContext())
         setAdapter()
+        backView()
     }
 
     private fun setAdapter() {
@@ -41,6 +44,12 @@ class CardInformationFragment : Fragment() {
                 adapter.submitList(list)
                 binding.rcycleView.adapter = adapter
             }
+        }
+    }
+
+    private fun backView(){
+        binding.imageView31.setOnClickListener {
+            findNavController().navigate(R.id.action_cardInformationFragment_to_accountSettingsFragment)
         }
     }
 }

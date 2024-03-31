@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.detailed.DetailedFragment">
+    tools:context="presentation.ui.fragments.detailed.DetailedFragment">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/SearchView"
@@ -15,12 +15,10 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/edtback"
         app:iconifiedByDefault="false"
-        app:layout_constraintBottom_toTopOf="@+id/view12"
         app:layout_constraintEnd_toStartOf="@+id/imageView45"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toEndOf="@+id/imageView43"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:queryHint="Marka,ürün veya kategori ara" />
 
     <ImageView
@@ -28,7 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toStartOf="@+id/SearchView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,11 +36,14 @@
         android:id="@+id/imageView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
         android:src="@drawable/share_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView45"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView45"
@@ -50,8 +53,8 @@
         android:layout_marginEnd="56dp"
         android:src="@drawable/baseline_shopping_cart_24"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SearchView"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonConfirm"
@@ -91,13 +94,13 @@
         android:id="@+id/txtPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:layout_marginStart="16dp"
+        android:text="ccxvb"
         android:textColor="@color/orange"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView19"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
 
@@ -145,12 +148,29 @@
                 android:id="@+id/introViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="410dp"
-                android:layout_marginTop="4dp"
                 android:stateListAnimator="@layout/viewpager2_item"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                android:id="@+id/springDotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dampingRatio="0.5"
+                app:dotsCornerRadius="10dp"
+                app:dotsSize="10dp"
+                app:dotsSpacing="5dp"
+                app:dotsStrokeColor="#C5C5C5"
+                app:dotsColor="#C5C5C5"
+                app:dotsStrokeWidth="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/introViewPager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:stiffness="300">
+
+            </com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator>
 
             <androidx.cardview.widget.CardView
                 android:visibility="visible"
@@ -211,7 +231,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview5"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -354,7 +374,7 @@
                         android:id="@+id/textView35"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="24dp"
                         android:layout_marginEnd="13dp"
                         android:text="@string/dealer"
                         app:layout_constraintEnd_toStartOf="@+id/txtSealer"
@@ -365,7 +385,7 @@
                         android:id="@+id/textView36"
                         android:layout_width="369dp"
                         android:layout_height="0dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         android:text="@string/dealer_info"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -376,8 +396,9 @@
                         android:id="@+id/textView38"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         android:text="@string/campaign_info"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView55"
                         app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
@@ -408,7 +429,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="9dp"
-                        android:layout_marginTop="18dp"
+                        android:layout_marginTop="16dp"
                         android:text="TextView"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/textView29"
@@ -419,7 +440,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:layout_marginTop="14dp"
+                        android:layout_marginTop="24dp"
                         android:text="TextView"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/textView35"
@@ -485,6 +506,7 @@
                         style="@style/Widget.AppCompat.RatingBar.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:isIndicator="true"
                         android:numStars="5"
@@ -521,14 +543,12 @@
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="4dp"
         android:text="TL"
         android:textColor="@color/orange"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonConfirm"
         app:layout_constraintStart_toEndOf="@+id/txtPrice"
         app:layout_constraintTop_toTopOf="@+id/buttonConfirm"
         app:layout_constraintVertical_bias="0.451" />

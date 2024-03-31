@@ -56,7 +56,7 @@
             android:text="TextView"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,10 +64,10 @@
             android:id="@+id/favDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/favName" />
 
@@ -75,14 +75,13 @@
             android:id="@+id/favPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="56dp"
             android:text="TextView"
             android:textColor="@color/orange"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/favName"
-            app:layout_constraintVertical_bias="0.476" />
+            app:layout_constraintTop_toBottomOf="@+id/favName" />
 
         <ImageView
             android:id="@+id/imageViewTrash"
@@ -94,8 +93,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button4"
-            android:layout_width="172dp"
-            android:layout_height="47dp"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
             android:backgroundTint="@color/white"
             android:text="Səbətə Əlavə Et"
             android:textColor="@color/orange"
@@ -112,15 +111,20 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
             android:layout_marginBottom="3dp"
+            android:visibility="visible"
+            app:boxStrokeColor="@color/orange"
+            app:cursorColor="@color/orange"
+            app:hintTextColor="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/favPrice"
             app:layout_constraintVertical_bias="0.95">
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/sizeTxt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="8dp"
@@ -138,12 +142,12 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
-            android:layout_marginBottom="19dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
             android:text="TL"
             android:textColor="@color/orange"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/button4"
-            app:layout_constraintStart_toEndOf="@+id/favPrice" />
+            app:layout_constraintStart_toEndOf="@+id/favPrice"
+            app:layout_constraintTop_toBottomOf="@+id/favDescription" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

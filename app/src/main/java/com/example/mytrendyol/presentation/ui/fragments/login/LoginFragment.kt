@@ -8,9 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.mytrendyol.ui.activity.MainActivity
 import com.example.mytrendyol.R
 import com.example.mytrendyol.databinding.FragmentLoginBinding
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
 import com.example.mytrendyol.presentation.ui.viewmodels.login.LoginViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth

@@ -6,14 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-
-import androidx.core.app.ActivityCompat.recreate
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.example.mytrendyol.R
-import com.example.mytrendyol.ui.activity.MainActivity
 import com.example.mytrendyol.databinding.FragmentAccountSettingsBinding
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import java.util.Locale
 
@@ -36,6 +32,7 @@ class AccountSettingsFragment : Fragment() {
         click()
         setLogOut()
         btnClick()
+        backView()
 
         val languages = arrayOf("Azerice", "English")
         val builder = AlertDialog.Builder(requireContext())
@@ -98,6 +95,11 @@ class AccountSettingsFragment : Fragment() {
         }
     }
 
+    private fun backView(){
+        binding.imageView10.setOnClickListener {
+            findNavController().navigate(R.id.action_accountSettingsFragment_to_profileFragment)
+        }
+    }
 
 
 }

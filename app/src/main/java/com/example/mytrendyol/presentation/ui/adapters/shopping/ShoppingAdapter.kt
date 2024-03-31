@@ -14,12 +14,14 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.DecimalFormat
 
 class ShoppingAdapter(private val listener: OnChangedListener) :
     RecyclerView.Adapter<ShoppingAdapter.MyViewHolder>() {
     private val firebaseUser = Firebase.auth.currentUser
     private lateinit var firestore: FirebaseFirestore
     private var totalAmount: Double = 0.0
+    private val decimalFormat = DecimalFormat("#.##")
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -57,7 +59,7 @@ class ShoppingAdapter(private val listener: OnChangedListener) :
             binding.btnPlus.setOnClickListener {
                 current.quantity++
                 binding.txtChangePrice.text = current.quantity.toString()
-                binding.shopPrice.text = calculatePrice(current).toString()
+                binding.shopPrice.text = formatPrice((calculatePrice(current)))
                 updateTotalAmount(current.price ?: 0.0, 1)
                 updateTotalPrice()
             }
@@ -66,7 +68,7 @@ class ShoppingAdapter(private val listener: OnChangedListener) :
                 if (current.quantity > 0) {
                     current.quantity--
                     binding.txtChangePrice.text = current.quantity.toString()
-                    binding.shopPrice.text = calculatePrice(current).toString()
+                    binding.shopPrice.text = formatPrice((calculatePrice(current)))
                     updateTotalAmount(-1 * (current.price ?: 0.0), -1)
                     updateTotalPrice()
                 }
@@ -90,6 +92,10 @@ class ShoppingAdapter(private val listener: OnChangedListener) :
                 totalAmount += calculatePrice(product)
             }
             listener.onTotalAmountChanged(totalAmount)
+        }
+
+        private fun formatPrice(price: Double): String {
+            return decimalFormat.format(price)
         }
 
         private fun removeFromFavorites(productId: String) {

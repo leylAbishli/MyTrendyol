@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.signUp.SignUpFragment">
+    tools:context=".presentation.ui.fragments.signUp.SignUpFragment">
 
 
     <View
@@ -107,7 +107,6 @@
                 android:id="@+id/btngoogle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/google_icon"
                 android:paddingStart="10dp"
@@ -117,13 +116,12 @@
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btnfcbook"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnfcbook"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
                 android:background="@drawable/btnback"
                 android:drawableLeft="@drawable/facebook_icon"
                 android:paddingStart="10dp"
@@ -140,10 +138,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="76dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/are_u_member"
                 app:layout_constraintEnd_toStartOf="@+id/textVievUye2"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.709"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnfcbook" />
 
@@ -151,10 +149,11 @@
                 android:id="@+id/textVievUye2"
                 android:layout_width="wrap_content"
                 android:layout_height="19dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="108dp"
                 android:text="@string/login"
                 android:textColor="@color/orange"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btngoogle" />
 
@@ -186,7 +185,7 @@
                 android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toStartOf="@+id/favDescription"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnSignİn" />
@@ -212,7 +211,7 @@
                 android:id="@+id/checkBox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toStartOf="@+id/favPrice"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
@@ -230,9 +229,9 @@
 
             <TextView
                 android:id="@+id/favDescription"
-                android:layout_width="278dp"
-                android:layout_height="42dp"
-                android:layout_marginTop="12dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/chip1"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -244,6 +243,7 @@
                 android:id="@+id/favPrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/chip2"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -255,7 +255,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/chip3"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -287,6 +287,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtSex">
 
+
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
@@ -298,11 +299,13 @@
                     android:padding="20dp"
                     android:text="@string/woman"
                     android:textSize="20sp"
+
                     app:layout_constraintBottom_toTopOf="@+id/btnSignİn"
                     app:layout_constraintHorizontal_bias="0.824"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtSex"
                     app:layout_constraintVertical_bias="0.627">
+
 
                 </RadioButton>
 
@@ -316,6 +319,7 @@
                     android:elevation="10dp"
                     android:padding="20dp"
                     android:text="@string/man"
+                    android:visibility="visible"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toTopOf="@+id/btnSignİn"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -352,7 +356,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.92" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"

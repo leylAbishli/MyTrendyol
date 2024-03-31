@@ -15,9 +15,6 @@ import com.google.firebase.storage.StorageReference
 
 class ProfileFragment : Fragment(){
     private lateinit var auth: FirebaseAuth
-    private lateinit var storageRef: StorageReference
-    private lateinit var firebaseDb: FirebaseFirestore
-    private var currentUser: FirebaseUser? = null
      private lateinit var binding:FragmentProfileBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

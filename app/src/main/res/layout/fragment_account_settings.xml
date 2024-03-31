@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.fragments.profile.AccountSettingsFragment">
+    tools:context=".presentation.ui.fragments.profile.AccountSettingsFragment">
 
 
     <ImageView
@@ -78,8 +78,7 @@
                         android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.822" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                     <EditText
                         android:id="@+id/editTextText2"
@@ -95,8 +94,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/editTextText"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.822" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button"
@@ -110,21 +108,19 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.785"
                         app:layout_constraintStart_toEndOf="@+id/editTextText2"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.86" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                     <TextView
                         android:id="@+id/textView7"
                         android:layout_width="330dp"
                         android:layout_height="34dp"
+                        android:layout_marginTop="24dp"
                         android:text="@string/suitable"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/editTextText"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.714"
                         app:layout_constraintStart_toEndOf="@+id/imageView11"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.425" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/imageView11"
@@ -156,7 +152,7 @@
                         android:id="@+id/txtpsw"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="64dp"
                         android:text="@string/change_psw"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -169,7 +165,7 @@
                         android:id="@+id/txteposta"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="68dp"
+                        android:layout_marginTop="70dp"
                         android:text="@string/change_email"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -244,10 +240,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="50dp"
+                        android:layout_marginBottom="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtinoutimg"
-                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/log_off_svgrepo_com" />
 
                     <ImageView
@@ -378,7 +374,7 @@
                         android:id="@+id/txtlocation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="54dp"
+                        android:layout_marginTop="60dp"
                         android:text="@string/my_address"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -391,7 +387,7 @@
                         android:id="@+id/txtcards"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="64dp"
+                        android:layout_marginTop="60dp"
                         android:text="@string/my_register_card"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -417,7 +413,7 @@
                         android:id="@+id/txtlanguage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="58dp"
+                        android:layout_marginTop="64dp"
                         android:text="@string/change_lang"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -443,10 +439,11 @@
                         android:id="@+id/txlogout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="56dp"
+                        android:layout_marginTop="40dp"
                         android:text="@string/logout"
                         android:textSize="18sp"
                         android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/imageView36"
                         app:layout_constraintHorizontal_bias="0.018"
                         app:layout_constraintStart_toEndOf="@+id/txtout"

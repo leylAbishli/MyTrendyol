@@ -99,4 +99,9 @@
     <string name="card_info_register">Registered Cards</string>
     <string name="card_name">Azerbaijan Card</string>
 
+    <!--    Reset Password-->
+
+    <string name="reset_info">Type the e-mail address you want to reset your password. A link will be sent to your e-mail address.</string>
+    <string name="refresh_psw">Reset my password</string>
+
 </resources>

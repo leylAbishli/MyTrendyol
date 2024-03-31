@@ -62,7 +62,7 @@ dependencies {
     //ViewPager
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     //implementation("me.relax:circleindicator:2.1.4")
-    implementation ("com.tbuonomo:dotsindicator:4.2")
+    implementation ("com.tbuonomo:dotsindicator:5.0")
 
 
     //RecyclerView (diffUtil implementation)
@@ -98,6 +98,8 @@ dependencies {
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+
 
     implementation("androidx.navigation:navigation-fragment:2.7.6")
     implementation("androidx.core:core-ktx:1.9.0")

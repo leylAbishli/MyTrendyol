@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.mytrendyol.ui.activity.MainActivity
 import com.example.mytrendyol.databinding.FragmentFavoritesBinding
-import com.example.mytrendyol.ui.adapters.detailed.SizeAdapter
-import com.example.mytrendyol.ui.adapters.favorites.FavoriteProductAdapter
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
+import com.example.mytrendyol.presentation.ui.adapters.detailed.SizeAdapter
+import com.example.mytrendyol.presentation.ui.adapters.favorites.FavoriteProductAdapter
+
 import com.example.mytrendyol.presentation.ui.viewmodels.favorites.FavoritesViewModel
 import com.example.mytrendyol.presentation.ui.adapters.favorites.OnChangedListener
 import com.example.mytrendyol.presentation.ui.models.main.FlashProductModel

@@ -99,5 +99,9 @@
     <!--    Card-->
     <string name="card_info_register">Kayıtlı Kartlarım</string>
     <string name="card_name">Azerbaycan Kartım</string>
+       <!--    Reset Password-->
+
+    <string name="reset_info">Parolunuzu sıfırlamak için istediğiniz e-posta addresini yazın.E-posta addresinize bir link gönderilecek</string>
+    <string name="refresh_psw">Parolamı yenile</string>
 
 </resources>

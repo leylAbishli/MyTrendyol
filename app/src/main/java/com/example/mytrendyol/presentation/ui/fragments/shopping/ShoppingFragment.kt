@@ -7,9 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.mytrendyol.R
-import com.example.mytrendyol.ui.adapters.shopping.ShoppingAdapter
 import com.example.mytrendyol.databinding.FragmentShoppingBinding
 import com.example.mytrendyol.presentation.ui.adapters.favorites.OnChangedListener
+import com.example.mytrendyol.presentation.ui.adapters.shopping.ShoppingAdapter
+import com.example.mytrendyol.presentation.ui.models.main.FlashProductModel
 import com.example.mytrendyol.presentation.ui.models.main.MainModel
 import com.example.mytrendyol.presentation.ui.viewmodels.shopping.ShoppingViewModel
 import com.google.firebase.firestore.FirebaseFirestore
@@ -18,6 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ShoppingFragment : Fragment(), OnChangedListener {
     private var shopList = ArrayList<MainModel>()
+    private var shopList2 = ArrayList<FlashProductModel>()
     lateinit var firestore: FirebaseFirestore
     lateinit var adapter: ShoppingAdapter
     private   val shopViewModel: ShoppingViewModel by viewModels()
@@ -50,7 +52,14 @@ class ShoppingFragment : Fragment(), OnChangedListener {
             }
             binding.rcycleFav.adapter=adapter
         }
+        shopViewModel.flashProducts.observe(viewLifecycleOwner){products->
+            products?.let {
+                this.shopList-it
+                adapter.submitList(shopList)
 
+            }
+            binding.rcycleFav.adapter=adapter
+        }
     }
 
 
@@ -76,3 +85,5 @@ class ShoppingFragment : Fragment(), OnChangedListener {
         }
     }
 }
+
+

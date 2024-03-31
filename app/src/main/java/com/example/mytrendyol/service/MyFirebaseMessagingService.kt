@@ -1,4 +1,4 @@
-package com.example.mytrendyol.useCase
+package com.example.mytrendyol.service
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -37,7 +37,6 @@ class MyFirebaseMessagingService:FirebaseMessagingService() {
         val remoteView=RemoteViews("com.example.mytrendyol", R.layout.notification_item)
         remoteView.setTextViewText(R.id.title,title)
         remoteView.setTextViewText(R.id.description,message)
-        remoteView.setImageViewResource(R.id.app_logo, R.drawable.unnamed)
         return remoteView
     }
 

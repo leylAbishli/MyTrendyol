@@ -8,9 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.mytrendyol.ui.activity.MainActivity
 import com.example.mytrendyol.R
 import com.example.mytrendyol.databinding.FragmentSplashScreenBinding
+import com.example.mytrendyol.presentation.ui.activity.MainActivity
 
 
 class SplashScreenFragment : Fragment() {
